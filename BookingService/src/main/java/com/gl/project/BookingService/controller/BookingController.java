@@ -1,0 +1,40 @@
+package com.gl.project.BookingService.controller;
+
+import com.gl.project.BookingService.dto.*;
+import com.gl.project.BookingService.service.BookingService;
+import com.gl.project.BookingService.utility.BookingException;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/bookings")
+@RequiredArgsConstructor
+public class BookingController {
+
+    private final BookingService bookingService;
+
+    @PostMapping
+    public ResponseEntity<BookingResponseDTO> createBooking(
+            @Valid @RequestBody BookingRequestDTO dto) throws BookingException {
+
+        return ResponseEntity.ok(bookingService.createBooking(dto));
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<List<BookingResponseDTO>> getBookingsByUser(
+            @PathVariable Long userId) throws BookingException {
+
+        return ResponseEntity.ok(bookingService.getBookingsByUser(userId));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteBooking(
+            @PathVariable Long id) throws BookingException {
+
+        return ResponseEntity.ok(bookingService.deleteBooking(id));
+    }
+}

@@ -1,0 +1,114 @@
+
+        package com.gl.project.ProviderService;
+
+import com.gl.project.ProviderService.controller.ServiceController;
+import com.gl.project.ProviderService.dto.ServiceDTO;
+import com.gl.project.ProviderService.service.ServiceServiceInterface;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+
+import java.util.List;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+class BookingServiceApplicationTests {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Mock
+    private ServiceServiceInterface service;
+
+    @InjectMocks
+    private ServiceController controller;
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    // ✅ 1. Context Load Test
+    @Test
+    void contextLoads() {
+    }
+
+    // ✅ 2. ADD SERVICE TEST
+    @Test
+    void testAddService() throws Exception {
+
+        ServiceDTO dto = new ServiceDTO(1L, "Cleaning", 500.0);
+
+        Mockito.when(service.addService(Mockito.any())).thenReturn(dto);
+
+        mockMvc.perform(post("/api/services")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(dto)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.serviceName").value("Cleaning"));
+    }
+
+    // ✅ 3. GET BY ID TEST
+//    @Test
+//    void testGetServiceById() throws Exception {
+//
+//        ServiceDTO dto = new ServiceDTO(1L, "Repair", 300.0);
+//
+//        Mockito.when(service.getServiceById(1L)).thenReturn(dto);
+//
+//        mockMvc.perform(get("/api/services/1"))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$.serviceName").value("Repair"));
+//    }
+
+//    // ✅ 4. GET ALL TEST
+//    @Test
+//    void testGetAllServices() throws Exception {
+//
+//        ServiceDTO dto = new ServiceDTO(1L, "Plumbing", 400.0);
+//
+//        Mockito.when(service.getAllServices()).thenReturn(List.of(dto));
+//
+//        mockMvc.perform(get("/api/services"))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$[0].serviceName").value("Plumbing"));
+//    }
+//
+    // ✅ 5. UPDATE TEST
+    @Test
+    void testUpdateService() throws Exception {
+
+        ServiceDTO dto = new ServiceDTO(1L, "Painting", 800.0);
+
+        Mockito.when(service.updateService(Mockito.eq(1L), Mockito.any()))
+                .thenReturn(dto);
+
+        mockMvc.perform(put("/api/services/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(dto)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.serviceName").value("Painting"));
+    }
+//
+    // ✅ 6. DELETE TEST
+    @Test
+    void testDeleteService() throws Exception {
+
+        Mockito.doNothing().when(service).deleteService(1L);
+
+        mockMvc.perform(delete("/api/services/1"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Service deleted successfully with ID: 1"));
+    }
+}

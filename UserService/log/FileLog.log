@@ -1,0 +1,8 @@
+06-Apr-2026 16:44:51 INFO - Executing Service Method: login
+06-Apr-2026 16:44:52 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@40256469
+06-Apr-2026 16:50:34 INFO - Executing Service Method: login
+06-Apr-2026 16:50:34 ERROR - Exception in Method: login | Error: Invalid email or password
+06-Apr-2026 16:50:43 INFO - Executing Service Method: register
+06-Apr-2026 16:50:44 INFO - Completed Service Method: register with result: com.gl.project.UserService.dto.UserResponseDTO@5d898faf
+07-Apr-2026 15:26:06 INFO - Executing Service Method: login
+07-Apr-2026 15:26:07 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@2cd9847a

@@ -1,0 +1,9 @@
+07-Apr-2026 16:32:02 INFO - Executing Service Method: createBooking
+07-Apr-2026 16:32:02 ERROR - Exception in Method: createBooking | Error: ModelMapper configuration errors:
+
+1) The destination property com.gl.project.BookingService.entity.Booking.setId() matches multiple source property hierarchies:
+
+	com.gl.project.BookingService.dto.BookingRequestDTO.getServiceId()
+	com.gl.project.BookingService.dto.BookingRequestDTO.getUserId()
+
+1 error
