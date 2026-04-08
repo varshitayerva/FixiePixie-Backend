@@ -11,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
@@ -30,7 +32,17 @@ public class UserController {
         return ResponseEntity.ok(userService.login(dto));
     }
     @GetMapping("/{id}")
-    public ResponseEntity<String> getUserById(@PathVariable Long id) throws UserException{
-        return ResponseEntity.ok("Fetch user by ID: " + id);
+    public ResponseEntity<UserResponseDTO> getUserById(@PathVariable Long id) throws UserException {
+        return ResponseEntity.ok(userService.getUserById(id));
+    }
+    @GetMapping
+    public ResponseEntity<List<UserResponseDTO>> getAllUsers() {
+        return ResponseEntity.ok(userService.getAllUsers());
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) throws UserException {
+
+        userService.deleteUser(id);
+        return ResponseEntity.ok("User deleted successfully");
     }
 }

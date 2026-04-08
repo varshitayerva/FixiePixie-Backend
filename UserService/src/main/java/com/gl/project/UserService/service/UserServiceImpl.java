@@ -11,6 +11,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor // Automatically injects all final fields via constructor
 public class UserServiceImpl implements UserService {
@@ -59,4 +61,31 @@ public class UserServiceImpl implements UserService {
                 .role(user.getRole().name())
                 .build();
     }
+    @Override
+    public UserResponseDTO getUserById(Long id) throws UserException {
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserException("User not found with ID: " + id));
+
+        return modelMapper.map(user, UserResponseDTO.class);
+    }
+    @Override
+    public List<UserResponseDTO> getAllUsers() {
+
+        return userRepository.findAll()
+                .stream()
+                .map(user -> modelMapper.map(user, UserResponseDTO.class))
+                .toList();
+    }
+
+
+    @Override
+    public void deleteUser(Long id) throws UserException {
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserException("User not found with ID: " + id));
+
+        userRepository.delete(user);
+    }
+
 }

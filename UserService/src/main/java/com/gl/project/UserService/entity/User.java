@@ -31,5 +31,7 @@ public class User {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private Role role;   // 🔥 NEW
+    private Role role;
+
+    //Add phone Number
 }

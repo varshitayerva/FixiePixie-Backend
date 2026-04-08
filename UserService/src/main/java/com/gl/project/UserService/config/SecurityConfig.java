@@ -1,6 +1,7 @@
 package com.gl.project.UserService.config;
 
 import com.gl.project.UserService.utility.UserException;
+import jakarta.ws.rs.HttpMethod;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -44,12 +45,22 @@ public class SecurityConfig {
                 .httpBasic(httpBasic -> httpBasic.disable())
 
                 .authorizeHttpRequests(auth -> auth
+                        // 1. Public endpoints
                         .requestMatchers("/users/register", "/users/login").permitAll()
-                        .requestMatchers("/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/provider/**").hasRole("PROVIDER")
-                        .requestMatchers("/user/**").hasRole("USER")
+
+                        // 2. Role-based access for /users/**
+                        // Only ADMIN can delete
+                        .requestMatchers(HttpMethod.DELETE, "/users/**").hasRole("ADMIN")
+
+                        // Only ADMIN can see all users
+                        .requestMatchers(HttpMethod.GET, "/users").hasRole("ADMIN")
+
+                        // Allow users to see their own profile (or others if business logic allows)
+                        .requestMatchers(HttpMethod.GET, "/users/{id}").hasAnyRole("USER", "ADMIN", "PROVIDER")
+
                         .anyRequest().authenticated()
                 )
+
 
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
