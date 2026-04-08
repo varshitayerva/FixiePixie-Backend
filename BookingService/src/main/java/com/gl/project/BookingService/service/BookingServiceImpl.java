@@ -1,5 +1,7 @@
 package com.gl.project.BookingService.service;
 
+import com.gl.project.BookingService.client.ProviderClient;
+import com.gl.project.BookingService.client.UserClient;
 import com.gl.project.BookingService.dto.*;
 import com.gl.project.BookingService.entity.Booking;
 import com.gl.project.BookingService.repository.BookingRepository;
@@ -18,16 +20,39 @@ public class BookingServiceImpl implements BookingService {
 
     private final BookingRepository bookingRepository;
     private final ModelMapper modelMapper;
+    private final UserClient userClient;
+    private final ProviderClient providerClient;
 
     @Override
-    public BookingResponseDTO createBooking(BookingRequestDTO dto) throws BookingException {
+    public BookingResponseDTO createBooking(BookingRequestDTO dto) {
 
-        Booking booking = modelMapper.map(dto, Booking.class);
-        booking.setStatus("BOOKED");
+        String userResponse = userClient.getUserById(dto.getUserId());
+
+        String providerResponse = providerClient.getServiceById(dto.getServiceId());
+
+        if (userResponse == null) {
+            throw new RuntimeException("User not found");
+        }
+
+        if (providerResponse == null) {
+            throw new RuntimeException("Service not found");
+        }
+
+        Booking booking = new Booking();
+        booking.setUserId(dto.getUserId());
+        booking.setServiceId(dto.getServiceId());
+        booking.setDate(dto.getDate());
+        booking.setStatus("CONFIRMED");
 
         Booking saved = bookingRepository.save(booking);
 
-        return modelMapper.map(saved, BookingResponseDTO.class);
+        return new BookingResponseDTO(
+                saved.getId(),
+                saved.getUserId(),
+                saved.getServiceId(),
+                saved.getDate(),
+                saved.getStatus()
+        );
     }
 
     @Override

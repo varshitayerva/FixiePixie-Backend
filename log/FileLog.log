@@ -1,0 +1,6 @@
+07-Apr-2026 23:26:41 INFO - Executing Service Method: login
+07-Apr-2026 23:26:41 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@4dde1a4f
+07-Apr-2026 23:38:06 INFO - Executing Service Method: login
+07-Apr-2026 23:38:06 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@1071302f
+07-Apr-2026 23:39:51 INFO - Executing Service Method: login
+07-Apr-2026 23:39:52 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@5e72030c
