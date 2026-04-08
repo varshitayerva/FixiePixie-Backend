@@ -1,6 +1,7 @@
 package com.gl.project.ProviderService.controller;
 
 import com.gl.project.ProviderService.dto.ServiceDTO;
+import com.gl.project.ProviderService.entity.ServiceCategory;
 import com.gl.project.ProviderService.service.ServiceServiceInterface;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,11 @@ public class ServiceController {
     public ServiceDTO updateService(@PathVariable Long id,
                                     @Valid @RequestBody ServiceDTO dto) {
         return service.updateService(id, dto);
+    }
+
+    @GetMapping("/category/{category}")
+    public List<ServiceDTO> getByCategory(@PathVariable ServiceCategory category) {
+        return service.getByCategory(category);
     }
 
 
