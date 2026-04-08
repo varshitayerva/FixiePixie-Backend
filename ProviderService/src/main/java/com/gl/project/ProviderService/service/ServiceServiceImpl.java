@@ -2,6 +2,7 @@ package com.gl.project.ProviderService.service;
 
 import com.gl.project.ProviderService.dto.ServiceDTO;
 import com.gl.project.ProviderService.entity.ProviderService;
+import com.gl.project.ProviderService.entity.ServiceCategory;
 import com.gl.project.ProviderService.utility.DuplicateServiceException;
 import com.gl.project.ProviderService.utility.ServiceNotFoundException;
 import com.gl.project.ProviderService.mapper.ServiceMapper;
@@ -82,12 +83,23 @@ public class ServiceServiceImpl implements ServiceServiceInterface {
             );
         }
 
+        // update ALL fields
         existing.setServiceName(dto.getServiceName());
         existing.setPrice(dto.getPrice());
+        existing.setDescription(dto.getDescription());
+        existing.setCategory(dto.getCategory());
 
         return ServiceMapper.toDTO(repo.save(existing));
     }
 
+    @Override
+    public List<ServiceDTO> getByCategory(ServiceCategory category) {
+
+        return repo.findByCategory(category)
+                .stream()
+                .map(ServiceMapper::toDTO)
+                .toList();
+    }
 
     @Override
     public void deleteService(Long id) {
