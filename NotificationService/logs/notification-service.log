@@ -1,0 +1,743 @@
+08-04-2026 10:20:35 [main] DEBUG org.springframework.core.env.PropertySourcesPropertyResolver - Found key 'spring.application.name' in PropertySource 'configurationProperties' with value of type String
+08-04-2026 10:20:35 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+08-04-2026 10:20:35 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find jakarta.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+08-04-2026 10:20:35 [main] INFO  com.gl.project.NotificationService.NotificationServiceApplication - Starting NotificationServiceApplication using Java 21.0.10 with PID 16068 (C:\Users\putta.bhavitha\Desktop\Capstone Project\NotificationService\NotificationService\target\classes started by putta.bhavitha in C:\Users\putta.bhavitha\Desktop\Capstone Project\NotificationService\NotificationService)
+08-04-2026 10:20:35 [main] DEBUG com.gl.project.NotificationService.NotificationServiceApplication - Running with Spring Boot v3.5.13, Spring v6.2.17
+08-04-2026 10:20:35 [main] INFO  com.gl.project.NotificationService.NotificationServiceApplication - No active profile set, falling back to 1 default profile: "default"
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+08-04-2026 10:20:35 [background-preinit] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+08-04-2026 10:20:36 [main] INFO  org.springframework.cloud.context.scope.GenericScope - BeanFactory id=1122ca8e-5d3a-38a8-8b9f-50bc551095b2
+08-04-2026 10:20:37 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8084 (http)
+08-04-2026 10:20:37 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8084"]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [Connector["http-nio-8084"]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardService[Tomcat]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardServer[-1]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardServer[-1]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardServer[-1]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@609319c3] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@609319c3] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@609319c3] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardService[Tomcat]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardService[Tomcat]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.53]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.StandardRoot@9687f55] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.StandardRoot@9687f55] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.StandardRoot@9687f55] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.DirResourceSet@4cb957b8] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.DirResourceSet@4cb957b8] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.DirResourceSet@4cb957b8] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.DirResourceSet@4cb957b8] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.DirResourceSet@4cb957b8] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.StandardRoot@9687f55] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.webresources.StandardRoot@9687f55] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.loader.WebappLoader - Starting this Loader
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.webresources.Cache - Increased cache size by [531] for item [org.apache.catalina.webresources.CachedResource@738d37fc] at [/WEB-INF/classes] making total cache size [531]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.core.StandardContext - No manager found. Checking if cluster manager should be used. Cluster configured: [false], Application distributable: [false]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.core.StandardContext - Configured a manager of class [org.apache.catalina.session.StandardManager]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@715a70e9] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@715a70e9] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@715a70e9] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@715a70e9] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@715a70e9] to [STARTED]
+08-04-2026 10:20:37 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+08-04-2026 10:20:37 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1865 ms
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.core.ContainerBase - Add container child [StandardWrapper[dispatcherServlet]] to container [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@193bb809] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@193bb809] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@193bb809] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@193bb809] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@193bb809] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [INITIALIZING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [INITIALIZED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat]] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardEngine[Tomcat]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.mapper.MapperListener@61cda923] to [STARTING_PREP]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.mapper.MapperListener@61cda923] to [STARTING]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.mapper.Mapper - Registered host [localhost]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.mapper.MapperListener - Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.mapper.MapperListener - Register Context [] for service [StandardService[Tomcat]]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.mapper.MapperListener - Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [org.apache.catalina.mapper.MapperListener@61cda923] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardService[Tomcat]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [StandardServer[-1]] to [STARTED]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimetypesFileTypeMap: load HOME
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Checking system property jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation -   not found
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Using java.util.ServiceLoader to find jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - ServiceProvider loading Facility used; returning object [org.eclipse.angus.activation.MimeTypeRegistryProviderImpl]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimeTypeRegistry: can't load from file - C:\Users\putta.bhavitha\.jakarta.mime.types
+java.io.FileNotFoundException: C:\Users\putta.bhavitha\.jakarta.mime.types (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.base/java.io.FileReader.<init>(FileReader.java:75) ~[?:?]
+	at org.eclipse.angus.activation.MimeTypeFile.<init>(MimeTypeFile.java:47) ~[angus-activation-2.0.3.jar:?]
+	at org.eclipse.angus.activation.MimeTypeRegistryProviderImpl.getByFileName(MimeTypeRegistryProviderImpl.java:28) ~[angus-activation-2.0.3.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.loadFile(MimetypesFileTypeMap.java:281) ~[jakarta.activation-api-2.1.4.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.<init>(MimetypesFileTypeMap.java:108) ~[jakarta.activation-api-2.1.4.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.<init>(MimetypesFileTypeMap.java:323) ~[jakarta.activation-api-2.1.4.jar:?]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.createFileTypeMap(ConfigurableMimeFileTypeMap.java:150) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.getFileTypeMap(ConfigurableMimeFileTypeMap.java:123) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.afterPropertiesSet(ConfigurableMimeFileTypeMap.java:110) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.<init>(JavaMailSenderImpl.java:114) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.boot.autoconfigure.mail.MailSenderPropertiesConfiguration.mailSender(MailSenderPropertiesConfiguration.java:49) ~[spring-boot-autoconfigure-3.5.13.jar:3.5.13]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) [spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) [spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) [spring-boot-3.5.13.jar:3.5.13]
+	at com.gl.project.NotificationService.NotificationServiceApplication.main(NotificationServiceApplication.java:10) [classes/:?]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Checking system property jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation -   not found
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Using java.util.ServiceLoader to find jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - ServiceProvider loading Facility used; returning object [org.eclipse.angus.activation.MimeTypeRegistryProviderImpl]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimeTypeRegistry: can't load from file - C:\Users\putta.bhavitha\.mime.types
+java.io.FileNotFoundException: C:\Users\putta.bhavitha\.mime.types (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.base/java.io.FileReader.<init>(FileReader.java:75) ~[?:?]
+	at org.eclipse.angus.activation.MimeTypeFile.<init>(MimeTypeFile.java:47) ~[angus-activation-2.0.3.jar:?]
+	at org.eclipse.angus.activation.MimeTypeRegistryProviderImpl.getByFileName(MimeTypeRegistryProviderImpl.java:28) ~[angus-activation-2.0.3.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.loadFile(MimetypesFileTypeMap.java:281) ~[jakarta.activation-api-2.1.4.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.<init>(MimetypesFileTypeMap.java:108) ~[jakarta.activation-api-2.1.4.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.<init>(MimetypesFileTypeMap.java:323) ~[jakarta.activation-api-2.1.4.jar:?]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.createFileTypeMap(ConfigurableMimeFileTypeMap.java:150) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.getFileTypeMap(ConfigurableMimeFileTypeMap.java:123) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.afterPropertiesSet(ConfigurableMimeFileTypeMap.java:110) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.<init>(JavaMailSenderImpl.java:114) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.boot.autoconfigure.mail.MailSenderPropertiesConfiguration.mailSender(MailSenderPropertiesConfiguration.java:49) ~[spring-boot-autoconfigure-3.5.13.jar:3.5.13]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) [spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) [spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) [spring-boot-3.5.13.jar:3.5.13]
+	at com.gl.project.NotificationService.NotificationServiceApplication.main(NotificationServiceApplication.java:10) [classes/:?]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimetypesFileTypeMap: load SYS
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Checking system property jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation -   not found
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Using java.util.ServiceLoader to find jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - ServiceProvider loading Facility used; returning object [org.eclipse.angus.activation.MimeTypeRegistryProviderImpl]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimeTypeRegistry: can't load from file - C:\Program Files\Amazon Corretto\jdk21.0.10_7\conf\jakarta.mime.types
+java.io.FileNotFoundException: C:\Program Files\Amazon Corretto\jdk21.0.10_7\conf\jakarta.mime.types (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.base/java.io.FileReader.<init>(FileReader.java:75) ~[?:?]
+	at org.eclipse.angus.activation.MimeTypeFile.<init>(MimeTypeFile.java:47) ~[angus-activation-2.0.3.jar:?]
+	at org.eclipse.angus.activation.MimeTypeRegistryProviderImpl.getByFileName(MimeTypeRegistryProviderImpl.java:28) ~[angus-activation-2.0.3.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.loadFile(MimetypesFileTypeMap.java:281) ~[jakarta.activation-api-2.1.4.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.<init>(MimetypesFileTypeMap.java:126) ~[jakarta.activation-api-2.1.4.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.<init>(MimetypesFileTypeMap.java:323) ~[jakarta.activation-api-2.1.4.jar:?]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.createFileTypeMap(ConfigurableMimeFileTypeMap.java:150) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.getFileTypeMap(ConfigurableMimeFileTypeMap.java:123) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.afterPropertiesSet(ConfigurableMimeFileTypeMap.java:110) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.<init>(JavaMailSenderImpl.java:114) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.boot.autoconfigure.mail.MailSenderPropertiesConfiguration.mailSender(MailSenderPropertiesConfiguration.java:49) ~[spring-boot-autoconfigure-3.5.13.jar:3.5.13]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) [spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) [spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) [spring-boot-3.5.13.jar:3.5.13]
+	at com.gl.project.NotificationService.NotificationServiceApplication.main(NotificationServiceApplication.java:10) [classes/:?]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Checking system property jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation -   not found
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Using java.util.ServiceLoader to find jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - ServiceProvider loading Facility used; returning object [org.eclipse.angus.activation.MimeTypeRegistryProviderImpl]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimeTypeRegistry: can't load from file - C:\Program Files\Amazon Corretto\jdk21.0.10_7\conf\mime.types
+java.io.FileNotFoundException: C:\Program Files\Amazon Corretto\jdk21.0.10_7\conf\mime.types (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.base/java.io.FileReader.<init>(FileReader.java:75) ~[?:?]
+	at org.eclipse.angus.activation.MimeTypeFile.<init>(MimeTypeFile.java:47) ~[angus-activation-2.0.3.jar:?]
+	at org.eclipse.angus.activation.MimeTypeRegistryProviderImpl.getByFileName(MimeTypeRegistryProviderImpl.java:28) ~[angus-activation-2.0.3.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.loadFile(MimetypesFileTypeMap.java:281) ~[jakarta.activation-api-2.1.4.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.<init>(MimetypesFileTypeMap.java:126) ~[jakarta.activation-api-2.1.4.jar:?]
+	at jakarta.activation.MimetypesFileTypeMap.<init>(MimetypesFileTypeMap.java:323) ~[jakarta.activation-api-2.1.4.jar:?]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.createFileTypeMap(ConfigurableMimeFileTypeMap.java:150) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.getFileTypeMap(ConfigurableMimeFileTypeMap.java:123) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.ConfigurableMimeFileTypeMap.afterPropertiesSet(ConfigurableMimeFileTypeMap.java:110) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.<init>(JavaMailSenderImpl.java:114) ~[spring-context-support-6.2.17.jar:6.2.17]
+	at org.springframework.boot.autoconfigure.mail.MailSenderPropertiesConfiguration.mailSender(MailSenderPropertiesConfiguration.java:49) ~[spring-boot-autoconfigure-3.5.13.jar:3.5.13]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) [spring-beans-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) [spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) [spring-context-6.2.17.jar:6.2.17]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) [spring-boot-3.5.13.jar:3.5.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) [spring-boot-3.5.13.jar:3.5.13]
+	at com.gl.project.NotificationService.NotificationServiceApplication.main(NotificationServiceApplication.java:10) [classes/:?]
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimetypesFileTypeMap: load JAR
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimetypesFileTypeMap: !anyLoaded
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimetypesFileTypeMap: not loading mime types file: /META-INF/jakarta.mime.types
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimetypesFileTypeMap: not loading mime types file: /META-INF/mime.types
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimetypesFileTypeMap: load DEF
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Checking system property jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation -   not found
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Using java.util.ServiceLoader to find jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - ServiceProvider loading Facility used; returning object [org.eclipse.angus.activation.MimeTypeRegistryProviderImpl]
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/html, html
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/html, htm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/html, HTML
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/html, HTM
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, txt
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, text
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, TXT
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, TEXT
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/gif, gif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/gif, GIF
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/ief, ief
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/jpeg, jpeg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/jpeg, jpg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/jpeg, jpe
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/jpeg, JPG
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/tiff, tiff
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/tiff, tif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/png, png
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/png, PNG
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-xwindowdump, xwd
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, ai
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, eps
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, ps
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/rtf, rtf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-tex, tex
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-texinfo, texinfo
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-texinfo, texi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, t
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, tr
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, roff
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/basic, au
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/midi, midi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/midi, mid
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aifc, aifc
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aiff, aif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aiff, aiff
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg, mpeg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg, mpg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-wav, wav
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpeg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpe
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/quicktime, qt
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/quicktime, mov
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/x-msvideo, avi
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - MimetypesFileTypeMap: successfully loaded mime types file: /META-INF/jakarta.mimetypes.default
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Checking system property jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation -   not found
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - Using java.util.ServiceLoader to find jakarta.activation.spi.MimeTypeRegistryProvider
+08-04-2026 10:20:37 [main] DEBUG jakarta.activation - ServiceProvider loading Facility used; returning object [org.eclipse.angus.activation.MimeTypeRegistryProviderImpl]
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/html, html
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/html, htm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/html, HTML
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/html, HTM
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, txt
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, text
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, TXT
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, TEXT
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, java
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, c
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, c++
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, cpp
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, pl
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, cc
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/plain, h
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/gif, gif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/gif, GIF
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/ief, ief
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/jpeg, jpeg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/jpeg, jpg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/jpeg, jpe
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/jpeg, JPG
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/tiff, tiff
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/tiff, tif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-xwindowdump, xwd
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, ai
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, eps
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, ps
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/rtf, rtf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-tex, tex
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-texinfo, texinfo
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-texinfo, texi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, t
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, tr
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, roff
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/basic, au
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/midi, midi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/midi, mid
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aifc, aifc
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aiff, aif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aiff, aiff
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg, mpeg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg, mpg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-wav, wav
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpeg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpe
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/quicktime, qt
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/quicktime, mov
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/x-msvideo, avi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/x-speech, talk
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/css, css
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/csv, csv
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-xbitmap, xbm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-xpixmap, xpm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/png, png
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/svg+xml, svg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/ief, ief
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/rgb, rgb
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/g3fax, g3f
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-xwindowdump, xwd
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-pict, pict
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-portable-pixmap, ppm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-portable-graymap, pgm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-portable-bitmap, pbm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-portable-anymap, pnm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-ms-bmp, bmp
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-cmu-raster, ras
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-photo-cd, pcd
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/cgm, cgm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-cals, mil
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-cals, cal
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/fif, fif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-mgx-dsf, dsf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/x-cmx, cmx
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/wavelet, wi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/vnd.dwg, dwg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/vnd.dxf, dxf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: image/vnd.svf, svf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/basic, au
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/basic, snd
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aiff, aif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aiff, aiff
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-aiff, aifc
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-wav, wav
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg, mpa
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg, abs
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg, mpega
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg-2, mp2a
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/x-mpeg-2, mpa2
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/echospeech, es
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: audio/voxware, vox
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/fastman, lcc
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-pn-realaudio, ra
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-pn-realaudio, ram
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-music/x-midi, mmid
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/vnd.koan, skp
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/x-speech, talk
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpeg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpg
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg, mpe
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg-2, mpv2
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/mpeg-2, mp2v
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/quicktime, qt
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/quicktime, mov
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/x-msvideo, avi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/x-sgi-movie, movie
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/vdo, vdo
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: video/vnd.vivo, viv
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-ns-proxy-autoconfig, pac
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-conference/x-cooltalk, ice
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, ai
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, eps
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/postscript, ps
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/rtf, rtf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/pdf, pdf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/vnd.mif, mif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, t
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, tr
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff, roff
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff-man, man
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff-me, me
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-troff-ms, ms
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-latex, latex
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-tex, tex
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-texinfo, texinfo
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-texinfo, texi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-dvi, dvi
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/msword, doc
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/msword, DOC
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/oda, oda
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/envoy, evy
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-gtar, gtar
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-tar, tar
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-ustar, ustar
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-bcpio, bcpio
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-cpio, cpio
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-shar, shar
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/zip, zip
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/mac-binhex40, hqx
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-stuffit, sit
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-stuffit, sea
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/fractals, fif
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/octet-stream, bin
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/octet-stream, uu
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/octet-stream, exe
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-wais-source, src
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-wais-source, wsrc
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/hdf, hdf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/javascript, js
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/javascript, ls
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: text/javascript, mocha
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-sh, sh
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-csh, csh
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-perl, pl
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-tcl, tcl
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/futuresplash, spl
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/mbedlet, mbd
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-rad-powermedia, rad
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/mspowerpoint, ppz
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-asap, asp
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/astound, asn
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-olescript, axs
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-oleobject, ods
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-form/x-openscape, opp
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-webbasic, wba
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-alpha-form, frm
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-script/x-wfxclient, wfx
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/octet-stream, exe
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/octet-stream, com
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-pcn, pcn
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/vnd.ms-excel, xls
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/vnd.ms-powerpoint, ppt
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/vnd.ms-project, mpp
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/vnd.svd, svd
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-net-install, ins
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/ccv, ccv
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: workbook/formulaone, vts
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-world/x-vrml, wrl
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-world/x-vrml, vrml
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-world/x-vream, vrw
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/x-p3d, p3d
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-world/x-svr, svr
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-world/x-wvr, wvr
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-world/x-3dmf, 3dmf
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/mathematica, ma
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: x-model/x-mesh, msh
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/vis5d, v5d
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: application/iges, igs
+08-04-2026 10:20:37 [main] DEBUG angus.activation - Added: MIMETypeEntry: drawing/x-dwf, dwf
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.AbstractConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.AbstractConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find jakarta.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+08-04-2026 10:20:38 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+08-04-2026 10:20:38 [main] DEBUG org.apache.catalina.webresources.Cache - Increased cache size by [521] for item [org.apache.catalina.webresources.CachedResource@1653b84e] at [/index.html] making total cache size [1052]
+08-04-2026 10:20:38 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	c.g.p.N.c.NotificationController:
+	{POST [/notify/email]}: sendEmail(NotificationRequest)
+	{POST [/notify/sms]}: sendSms(NotificationRequest)
+08-04-2026 10:20:38 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+08-04-2026 10:20:38 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+08-04-2026 10:20:38 [main] DEBUG org.apache.catalina.webresources.Cache - Increased cache size by [501] for item [org.apache.catalina.webresources.CachedResource@46bb0bdf] at [/] making total cache size [1553]
+08-04-2026 10:20:38 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+08-04-2026 10:20:39 [main] INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+08-04-2026 10:20:39 [main] WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08-04-2026 10:20:39 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [Connector["http-nio-8084"]] to [STARTING_PREP]
+08-04-2026 10:20:39 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [Connector["http-nio-8084"]] to [STARTING]
+08-04-2026 10:20:39 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8084"]
+08-04-2026 10:20:39 [main] DEBUG org.apache.catalina.util.LifecycleBase - Setting state for [Connector["http-nio-8084"]] to [STARTED]
+08-04-2026 10:20:39 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8084 (http) with context path '/'
+08-04-2026 10:20:39 [main] INFO  com.gl.project.NotificationService.NotificationServiceApplication - Started NotificationServiceApplication in 4.174 seconds (process running for 5.812)
+08-04-2026 10:50:46 [SIGINT handler] DEBUG java.lang.Runtime - Runtime.exit() called with status: 130
+java.lang.Throwable: Runtime.exit(130)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179) ~[?:?]
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160) ~[?:?]
+	at java.base/java.lang.Terminator$1.handle(Terminator.java:51) ~[?:?]
+	at java.base/jdk.internal.misc.Signal$1.run(Signal.java:218) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+08-04-2026 10:50:46 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+08-04-2026 10:50:46 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
