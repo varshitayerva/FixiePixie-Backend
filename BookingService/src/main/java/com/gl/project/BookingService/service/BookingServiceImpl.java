@@ -43,6 +43,7 @@ public class BookingServiceImpl implements BookingService {
         booking.setServiceId(dto.getServiceId());
         booking.setDate(dto.getDate());
         booking.setStatus("CONFIRMED");
+        booking.setTimeSlot(dto.getTimeSlot());
 
         Booking saved = bookingRepository.save(booking);
 
@@ -51,7 +52,8 @@ public class BookingServiceImpl implements BookingService {
                 saved.getUserId(),
                 saved.getServiceId(),
                 saved.getDate(),
-                saved.getStatus()
+                saved.getStatus(),
+                saved.getTimeSlot()
         );
     }
 
