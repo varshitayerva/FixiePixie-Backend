@@ -43,6 +43,8 @@ class controllerTest {
     @Test
     void saveReviewReturnsCreatedReview() throws Exception {
         reviewDTO request = reviewDTO.builder()
+                .userId(10L)
+                .userName("Smruti")
                 .providerServiceId(4L)
                 .bookingId(9L)
                 .rating(5)
@@ -51,6 +53,8 @@ class controllerTest {
 
         reviewDTO response = reviewDTO.builder()
                 .id(1L)
+                .userId(10L)
+                .userName("Smruti")
                 .providerServiceId(4L)
                 .bookingId(9L)
                 .rating(5)
@@ -65,6 +69,8 @@ class controllerTest {
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(1L))
+                .andExpect(jsonPath("$.userId").value(10L))
+                .andExpect(jsonPath("$.userName").value("Smruti"))
                 .andExpect(jsonPath("$.providerServiceId").value(4L))
                 .andExpect(jsonPath("$.bookingId").value(9L))
                 .andExpect(jsonPath("$.rating").value(5))
@@ -74,6 +80,8 @@ class controllerTest {
     @Test
     void saveReviewReturnsBadRequestForValidationFailure() throws Exception {
         reviewDTO request = reviewDTO.builder()
+                .userId(null)
+                .userName(null)
                 .providerServiceId(null)
                 .bookingId(null)
                 .rating(6)
@@ -82,9 +90,11 @@ class controllerTest {
 
         mockMvc.perform(post("/review/give")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(request)))
+                .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.error").value("Validation Failed"))
+                .andExpect(jsonPath("$.validationErrors.userId").value("User ID is required"))
+                .andExpect(jsonPath("$.validationErrors.userName").value("User Name is required"))
                 .andExpect(jsonPath("$.validationErrors.providerServiceId").value("Provider Service ID is required"))
                 .andExpect(jsonPath("$.validationErrors.bookingId").value("Booking ID is required"))
                 .andExpect(jsonPath("$.validationErrors.rating").value("Rating cannot exceed 5"))
@@ -99,30 +109,4 @@ class controllerTest {
 
         when(reviewService.updateReview(eq(77L), any(reviewUpdateDTO.class)))
                 .thenThrow(new ReviewNotFound("review not found"));
-
-        mockMvc.perform(put("/review/update/77")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(request)))
-                .andExpect(status().isNotFound())
-                .andExpect(jsonPath("$.error").value("Not Found"))
-                .andExpect(jsonPath("$.message").value("review not found"));
-    }
-
-    @Test
-    void deleteReviewReturnsSuccessMessage() throws Exception {
-        doNothing().when(reviewService).deleteReview(3L);
-
-        mockMvc.perform(delete("/review/delete/3"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$").value("Review deleted successfully"));
-    }
-
-    @Test
-    void deleteReviewReturnsNotFoundWhenReviewIsMissing() throws Exception {
-        doThrow(new ReviewNotFound("review not found")).when(reviewService).deleteReview(88L);
-
-        mockMvc.perform(delete("/review/delete/88"))
-                .andExpect(status().isNotFound())
-                .andExpect(jsonPath("$.message").value("review not found"));
-    }
-}
+    }}

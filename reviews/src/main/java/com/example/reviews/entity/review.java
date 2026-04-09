@@ -21,15 +21,14 @@ public class review {
 
     private Long userId;
 
- private String userName;
+private String userName;
 
 
-    // If you want to keep the Provider relationship simple (ID only)
+
     @Column(nullable = false)
     private Long providerServiceId;
 
-    @Column(nullable = false, unique = true)
-    private Long bookingId;
+
 
     @Column(nullable = false)
     private Integer rating;
@@ -48,21 +47,18 @@ public class review {
         this.id = id;
     }
 
-    public Long getProviderServiceId() {
-        return providerServiceId;
+
+
+
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setProviderServiceId(Long providerServiceId) {
-        this.providerServiceId = providerServiceId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public Long getBookingId() {
-        return bookingId;
-    }
 
-    public void setBookingId(Long bookingId) {
-        this.bookingId = bookingId;
-    }
 
     public Integer getRating() {
         return rating;
@@ -88,19 +84,19 @@ public class review {
         this.createdAt = createdAt;
     }
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
     public String getUserName() {
         return userName;
     }
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public Long getProviderServiceId() {
+        return providerServiceId;
+    }
+
+    public void setProviderServiceId(Long providerServiceId) {
+        this.providerServiceId = providerServiceId;
     }
 }

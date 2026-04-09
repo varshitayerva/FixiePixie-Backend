@@ -19,14 +19,14 @@ public class reviewDTO {
     @NotNull(message = "User ID is required")
     private Long userId;
 
-    @NotNull(message = "User Name is required")
+//    @NotNull(message = "User Name is required")
     String userName;
 
     @NotNull(message = "Provider Service ID is required")
     @Positive(message = "Provider Service ID must be positive")
     private Long providerServiceId;
 
-    @NotNull(message = "Booking ID is required")
+
     private Long bookingId;
 
     @NotNull(message = "Rating is required")
