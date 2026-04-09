@@ -1,5 +1,6 @@
 package com.gl.app.PaymentMicroservice.Service;
 
+import com.gl.app.PaymentMicroservice.Client.BookingClient;
 import com.gl.app.PaymentMicroservice.DTO.PaymentDTO;
 import com.gl.app.PaymentMicroservice.Entity.PaymentEntity;
 import com.gl.app.PaymentMicroservice.Entity.PaymentStatus;
@@ -19,16 +20,31 @@ public class PaymentServiceImpl implements PaymentServiceInterface {
     @Autowired
     private PaymentServiceRepository paymentServiceRepository;
 
+    @Autowired
+    private BookingClient bookingClient; // 1. Inject the BookingClient
+
     @Override
     public PaymentEntity processPayment(PaymentDTO paymentDTO) {
         PaymentEntity paymentEntity = new PaymentEntity();
         paymentEntity.setBookingId(String.valueOf(paymentDTO.getBookingId()));
         paymentEntity.setAmount(paymentDTO.getAmount());
         paymentEntity.setPaymentMethod(paymentDTO.getPaymentMethod());
-        paymentEntity.setStatus(PaymentStatus.PENDING);
-        return paymentServiceRepository.save(paymentEntity);
-    }
+        paymentEntity.setStatus(PaymentStatus.SUCCESS);
+        PaymentEntity savedPayment = paymentServiceRepository.save(paymentEntity);
 
+        // 2. AUTOMATION: Call Booking Service back
+        // If the payment is successful, flip the booking status to CONFIRMED
+        if (savedPayment.getStatus() == PaymentStatus.SUCCESS) {
+            try {
+                bookingClient.updateBookingStatus(paymentDTO.getBookingId(), "CONFIRMED");
+            } catch (Exception e) {
+                // We log the error but don't fail the payment process
+                // because the money has already been "taken".
+                System.err.println("CRITICAL: Payment succeeded but Booking Service update failed: " + e.getMessage());
+            }
+        }
+        return savedPayment;
+    }
     @Override
     public PaymentEntity getPaymentById(Long id) {
         return paymentServiceRepository.findById(id)
