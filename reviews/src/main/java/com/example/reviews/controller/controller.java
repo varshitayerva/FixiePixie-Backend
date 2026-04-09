@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/review")
 public class controller {
@@ -32,6 +34,11 @@ public class controller {
     public ResponseEntity<String> deleteReview(@PathVariable Long id) {
         reviewService.deleteReview(id);
         return ResponseEntity.ok("Review deleted successfully");
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<reviewDTO>> getAllReviews() {
+        return ResponseEntity.ok(reviewService.getAllReviews());
     }
 
 

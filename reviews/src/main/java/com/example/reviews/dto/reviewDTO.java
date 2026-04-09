@@ -1,5 +1,6 @@
 package com.example.reviews.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.*;
 import lombok.*;
 import java.time.LocalDateTime;
@@ -8,12 +9,18 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class reviewDTO {
 
     private Long id;
 
-//    @NotNull(message = "User ID is required")
-//    private Long userId;
+    @NotNull(message = "User ID is required")
+    private Long userId;
+
+    @NotNull(message = "User Name is required")
+    String userName;
 
     @NotNull(message = "Provider Service ID is required")
     @Positive(message = "Provider Service ID must be positive")
@@ -79,5 +86,21 @@ public class reviewDTO {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
