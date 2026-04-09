@@ -23,38 +23,74 @@ public class BookingServiceImpl implements BookingService {
     private final UserClient userClient;
     private final ProviderClient providerClient;
 
+//    @Override
+//    public BookingResponseDTO createBooking(BookingRequestDTO dto) {
+//
+//        String userResponse = userClient.getUserById(dto.getUserId());
+//
+//        String providerResponse = providerClient.getServiceById(dto.getServiceId());
+//
+//        if (userResponse == null) {
+//            throw new RuntimeException("User not found");
+//        }
+//
+//        if (providerResponse == null) {
+//            throw new RuntimeException("Service not found");
+//        }
+//
+//        Booking booking = new Booking();
+//        booking.setUserId(dto.getUserId());
+//        booking.setServiceId(dto.getServiceId());
+//        booking.setDate(dto.getDate());
+//        booking.setStatus("CONFIRMED");
+//        booking.setTimeSlot(dto.getTimeSlot());
+//
+//        Booking saved = bookingRepository.save(booking);
+//
+//        return new BookingResponseDTO(
+//                saved.getId(),
+//                saved.getUserId(),
+//                saved.getServiceId(),
+//                saved.getDate(),
+//                saved.getStatus(),
+//                saved.getTimeSlot()
+//        );
+//    }
+
+
+
+
+
     @Override
     public BookingResponseDTO createBooking(BookingRequestDTO dto) {
-
         String userResponse = userClient.getUserById(dto.getUserId());
-
         String providerResponse = providerClient.getServiceById(dto.getServiceId());
 
-        if (userResponse == null) {
-            throw new RuntimeException("User not found");
-        }
-
-        if (providerResponse == null) {
-            throw new RuntimeException("Service not found");
-        }
+        if (userResponse == null) throw new RuntimeException("User not found");
+        if (providerResponse == null) throw new RuntimeException("Service not found");
 
         Booking booking = new Booking();
         booking.setUserId(dto.getUserId());
         booking.setServiceId(dto.getServiceId());
         booking.setDate(dto.getDate());
-        booking.setStatus("CONFIRMED");
+        // Start as PENDING_PAYMENT to trigger frontend redirect
+        booking.setStatus("PENDING_PAYMENT");
         booking.setTimeSlot(dto.getTimeSlot());
 
         Booking saved = bookingRepository.save(booking);
 
         return new BookingResponseDTO(
-                saved.getId(),
-                saved.getUserId(),
-                saved.getServiceId(),
-                saved.getDate(),
-                saved.getStatus(),
-                saved.getTimeSlot()
+                saved.getId(), saved.getUserId(), saved.getServiceId(),
+                saved.getDate(), saved.getStatus(), saved.getTimeSlot()
         );
+    }
+
+    @Override
+    public void updateBookingStatus(Long id, String status) {
+        Booking booking = bookingRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Booking not found"));
+        booking.setStatus(status);
+        bookingRepository.save(booking);
     }
 
     @Override

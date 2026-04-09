@@ -12,4 +12,6 @@ public interface BookingService {
     List<BookingResponseDTO> getBookingsByUser(Long userId) throws BookingException;
 
     String deleteBooking(Long id) throws BookingException;
+
+    void updateBookingStatus(Long id, String status);
 }
