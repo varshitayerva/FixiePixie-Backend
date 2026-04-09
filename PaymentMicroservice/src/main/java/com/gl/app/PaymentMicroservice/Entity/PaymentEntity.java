@@ -1,6 +1,7 @@
 package com.gl.app.PaymentMicroservice.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,5 +34,6 @@ public class PaymentEntity {
 
     @Enumerated(EnumType.STRING)
     private  PaymentStatus status;
+
 
 }
