@@ -1,17 +1,21 @@
 package com.gl.project.UserService.service;
+
 import com.gl.project.UserService.dto.*;
-import com.gl.project.UserService.utility.UserException;
 
 import java.util.List;
 
+
 public interface UserService {
-    UserResponseDTO register(UserRegisterDTO dto) throws UserException;
 
-    LoginResponseDTO login(UserLoginDTO dto) throws UserException;
+    AuthResponse register(RegisterRequest request);
 
-    UserResponseDTO getUserById(Long id) throws UserException;
+    AuthResponse login(LoginRequest request);
 
-    List<UserResponseDTO> getAllUsers();
+    UserResponse getUserById(Long id);
 
-    void deleteUser(Long id) throws UserException;
+    List<UserResponse> getAllUsers();
+
+    UserResponse updateUser(Long id, RegisterRequest request);
+
+    void deleteUser(Long id);
 }

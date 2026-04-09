@@ -34,4 +34,6 @@ public class User {
     private Role role;
 
     //Add phone Number
+    @Column(nullable = false)
+    private long number;
 }

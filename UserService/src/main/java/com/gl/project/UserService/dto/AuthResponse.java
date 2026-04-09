@@ -7,12 +7,10 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class LoginResponseDTO {
+public class AuthResponse {
 
     private String token;
-    private String type;
-    private Long userId;
     private String email;
     private String role;
-
+    private String message;
 }

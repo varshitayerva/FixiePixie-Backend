@@ -1,74 +1,63 @@
 package com.gl.project.UserService.config;
 
-import com.gl.project.UserService.utility.UserException;
-import jakarta.ws.rs.HttpMethod;
+import com.gl.project.UserService.security.CustomUserDetailsService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.*;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig {
 
+    private final CustomUserDetailsService customUserDetailsService;
+
+    /**
+     * All security/JWT validation is handled at the API Gateway.
+     * UserService trusts all incoming requests (already validated by gateway).
+     * Only open endpoints are /api/users/register and /api/users/login.
+     */
     @Bean
-    public BCryptPasswordEncoder passwordEncoder() {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                .csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement(session ->
+                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(auth -> auth
+                        // These two are fully public - no token needed
+                        .requestMatchers("/api/users/register", "/api/users/login").permitAll()
+                        // All other endpoints are permitted - gateway handles auth
+                        .anyRequest().permitAll()
+                );
+
+        return http.build();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
-    public UserDetailsService userDetailsService() throws UserException{
-        return username -> {
-            try {
-                throw new UserException("User not found");
-            } catch (UserException e) {
-                throw new RuntimeException(e);
-            }
-        };
+    public DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+        authProvider.setUserDetailsService(customUserDetailsService);
+        authProvider.setPasswordEncoder(passwordEncoder());
+        return authProvider;
     }
 
-
-
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http,
-                                                   JwtAuthFilter jwtAuthFilter) throws Exception {
-
-        http
-                .csrf(csrf -> csrf.disable())
-
-                .formLogin(form -> form.disable())
-                .httpBasic(httpBasic -> httpBasic.disable())
-
-                .authorizeHttpRequests(auth -> auth
-                        // 1. Public endpoints
-                        .requestMatchers("/users/register", "/users/login").permitAll()
-
-                        // 2. Role-based access for /users/**
-                        // Only ADMIN can delete
-                        .requestMatchers(HttpMethod.DELETE, "/users/**").hasRole("ADMIN")
-
-                        // Only ADMIN can see all users
-                        .requestMatchers(HttpMethod.GET, "/users").hasRole("ADMIN")
-
-                        // Allow users to see their own profile (or others if business logic allows)
-                        .requestMatchers(HttpMethod.GET, "/users/{id}").hasAnyRole("USER", "ADMIN", "PROVIDER")
-
-                        .anyRequest().authenticated()
-                )
-
-
-                .sessionManagement(session ->
-                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                )
-
-                .addFilterBefore(jwtAuthFilter,
-                        UsernamePasswordAuthenticationFilter.class);
-
-        return http.build();
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+        return config.getAuthenticationManager();
     }
 }

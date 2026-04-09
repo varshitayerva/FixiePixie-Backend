@@ -4,3 +4,32 @@
 07-Apr-2026 23:38:06 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@1071302f
 07-Apr-2026 23:39:51 INFO - Executing Service Method: login
 07-Apr-2026 23:39:52 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@5e72030c
+08-Apr-2026 11:45:34 INFO - Executing Service Method: login
+08-Apr-2026 11:45:34 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@d97a9e6
+08-Apr-2026 11:51:11 INFO - Executing Service Method: login
+08-Apr-2026 11:51:11 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.LoginResponseDTO@33b04c4e
+08-Apr-2026 11:53:10 INFO - Executing Service Method: login
+08-Apr-2026 11:53:10 ERROR - Exception in Method: login | Error: Invalid email or password
+08-Apr-2026 20:56:05 INFO - Executing Service Method: register
+08-Apr-2026 20:56:06 ERROR - Exception in Method: register | Error: could not execute statement [ERROR: new row for relation "users" violates check constraint "users_role_check"
+  Detail: Failing row contains (4, 123 Main St, john@example.com, John Doe, 9876543210, $2a$10$ZP0rgqE/ebbQoXY9S16kn.yhMYEXmlCKbcjNGg9TTkN5rhpfBHa9i, ROLE_USER).] [insert into users (address,email,name,number,password,role) values (?,?,?,?,?,?)]; SQL [insert into users (address,email,name,number,password,role) values (?,?,?,?,?,?)]; constraint [users_role_check]
+08-Apr-2026 20:57:58 INFO - Executing Service Method: register
+08-Apr-2026 20:57:58 INFO - Completed Service Method: register with result: com.gl.project.UserService.dto.AuthResponse@74559962
+08-Apr-2026 21:04:57 INFO - Executing Service Method: login
+08-Apr-2026 21:04:57 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.AuthResponse@73883205
+08-Apr-2026 21:06:21 INFO - Executing Service Method: login
+08-Apr-2026 21:06:21 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.AuthResponse@2ef27aee
+08-Apr-2026 21:12:41 INFO - Executing Service Method: login
+08-Apr-2026 21:12:41 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.AuthResponse@4964faf1
+08-Apr-2026 21:12:45 INFO - Executing Service Method: login
+08-Apr-2026 21:12:45 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.AuthResponse@2b0875fc
+08-Apr-2026 21:19:18 INFO - Executing Service Method: register
+08-Apr-2026 21:19:18 INFO - Completed Service Method: register with result: com.gl.project.UserService.dto.AuthResponse@1eb054fc
+08-Apr-2026 21:19:22 INFO - Executing Service Method: login
+08-Apr-2026 21:19:22 INFO - Completed Service Method: login with result: com.gl.project.UserService.dto.AuthResponse@7fe358fa
+08-Apr-2026 21:20:07 INFO - Executing Service Method: getAllUsers
+08-Apr-2026 21:20:07 INFO - Completed Service Method: getAllUsers with result: [com.gl.project.UserService.dto.UserResponse@7271ea64]
+08-Apr-2026 21:20:13 INFO - Executing Service Method: getUserById
+08-Apr-2026 21:20:13 ERROR - Exception in Method: getUserById | Error: User not found with id: 1
+08-Apr-2026 21:20:18 INFO - Executing Service Method: getUserById
+08-Apr-2026 21:20:18 INFO - Completed Service Method: getUserById with result: com.gl.project.UserService.dto.UserResponse@20240a15
