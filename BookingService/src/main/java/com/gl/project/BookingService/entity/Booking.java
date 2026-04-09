@@ -24,5 +24,7 @@ public class Booking {
 
     private LocalDate date;
 
-    private String status; // BOOKED, CANCELLED
+    private String status;
+
+    private String timeSlot;
 }

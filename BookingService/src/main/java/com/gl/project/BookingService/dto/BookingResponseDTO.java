@@ -18,4 +18,5 @@ public class BookingResponseDTO {
     private Long serviceId;
     private LocalDate date;
     private String status;
+    private String timeSlot;
 }
