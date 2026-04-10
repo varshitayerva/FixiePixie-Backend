@@ -58,9 +58,18 @@ public class BookingController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<List<BookingResponseDTO>> getBookingsByUser(
+    public ResponseEntity<List<BookingDetailsDTO>> getBookingsByUser(
             @PathVariable Long userId) throws BookingException {
         return ResponseEntity.ok(bookingService.getBookingsByUser(userId));
+    }
+
+    @GetMapping("/service/{serviceId}")
+    public ResponseEntity<List<BookingDetailsDTO>> getBookingsByServiceProvider(
+            @PathVariable Long serviceId) throws BookingException {
+
+        return ResponseEntity.ok(
+                bookingService.getBookingsByServiceProvider(serviceId)
+        );
     }
 
     @DeleteMapping("/{id}")
