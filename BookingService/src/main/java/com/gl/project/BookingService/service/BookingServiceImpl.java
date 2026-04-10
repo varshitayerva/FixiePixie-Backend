@@ -25,57 +25,23 @@ public class BookingServiceImpl implements BookingService {
     private final ProviderClient providerClient;
     private final NotificationClient notificationClient;
 
-//    @Override
-//    public BookingResponseDTO createBooking(BookingRequestDTO dto) {
-//
-//        String userResponse = userClient.getUserById(dto.getUserId());
-//
-//        String providerResponse = providerClient.getServiceById(dto.getServiceId());
-//
-//        if (userResponse == null) {
-//            throw new RuntimeException("User not found");
-//        }
-//
-//        if (providerResponse == null) {
-//            throw new RuntimeException("Service not found");
-//        }
-//
-//        Booking booking = new Booking();
-//        booking.setUserId(dto.getUserId());
-//        booking.setServiceId(dto.getServiceId());
-//        booking.setDate(dto.getDate());
-//        booking.setStatus("CONFIRMED");
-//        booking.setTimeSlot(dto.getTimeSlot());
-//
-//        Booking saved = bookingRepository.save(booking);
-//
-//        return new BookingResponseDTO(
-//                saved.getId(),
-//                saved.getUserId(),
-//                saved.getServiceId(),
-//                saved.getDate(),
-//                saved.getStatus(),
-//                saved.getTimeSlot()
-//        );
-//    }
-
-
-
 
 
     @Override
     public BookingResponseDTO createBooking(BookingRequestDTO dto) {
-        String userResponse = String.valueOf(userClient.getUserById(dto.getUserId()));
-        String providerResponse = providerClient.getServiceById(dto.getServiceId());
+        UserResponseDTO userResponse = userClient.getUserById(dto.getUserId());
+        if (userResponse == null || userResponse.getData() == null) {
+            throw new RuntimeException("User not found");
+        }
 
-        if (userResponse == null) throw new RuntimeException("User not found");
-        if (providerResponse == null) throw new RuntimeException("Service not found");
-
+        ServiceDTO serviceResponse = providerClient.getServiceById(dto.getServiceId());
+        if (serviceResponse == null) {
+            throw new RuntimeException("Service not found");
+        }
         Booking booking = new Booking();
         booking.setUserId(dto.getUserId());
         booking.setServiceId(dto.getServiceId());
         booking.setDate(dto.getDate());
-        // Start as PENDING_PAYMENT to trigger frontend redirect
         booking.setStatus("PENDING_PAYMENT");
         booking.setTimeSlot(dto.getTimeSlot());
 
@@ -133,8 +99,9 @@ public class BookingServiceImpl implements BookingService {
         notificationClient.sendEmail(request);
         notificationClient.sendSms(request);
     }
+
     @Override
-    public List<BookingResponseDTO> getBookingsByUser(Long userId) throws BookingException {
+    public List<BookingDetailsDTO> getBookingsByUser(Long userId) throws BookingException {
 
         List<Booking> bookings = bookingRepository.findByUserId(userId);
 
@@ -142,9 +109,53 @@ public class BookingServiceImpl implements BookingService {
             throw new BookingException("No bookings found for user");
         }
 
-        return bookings.stream()
-                .map(b -> modelMapper.map(b, BookingResponseDTO.class))
-                .collect(Collectors.toList());
+        return bookings.stream().map(booking -> {
+
+            UserResponseDTO userResponse = userClient.getUserById(booking.getUserId());
+            String userName = userResponse.getData().getName();
+
+            ServiceDTO service = providerClient.getServiceById(booking.getServiceId());
+            String serviceName = service.getServiceName();
+
+            return new BookingDetailsDTO(
+                    booking.getId(),
+                    userName,
+                    serviceName,
+                    booking.getDate(),
+                    booking.getStatus(),
+                    booking.getTimeSlot()
+            );
+
+        }).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<BookingDetailsDTO> getBookingsByServiceProvider(Long serviceId) throws BookingException {
+
+        List<Booking> bookings = bookingRepository.findByServiceId(serviceId);
+
+        if (bookings.isEmpty()) {
+            throw new BookingException("No bookings found for this service");
+        }
+
+        ServiceDTO service = providerClient.getServiceById(serviceId);
+        String serviceName = service.getServiceName();
+
+        return bookings.stream().map(booking -> {
+
+            UserResponseDTO userResponse = userClient.getUserById(booking.getUserId());
+            String userName = userResponse.getData().getName();
+
+            return new BookingDetailsDTO(
+                    booking.getId(),
+                    userName,
+                    serviceName,
+                    booking.getDate(),
+                    booking.getStatus(),
+                    booking.getTimeSlot()
+            );
+
+        }).collect(Collectors.toList());
     }
 
     @Override
