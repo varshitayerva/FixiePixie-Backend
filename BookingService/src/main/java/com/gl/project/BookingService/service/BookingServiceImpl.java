@@ -1,5 +1,6 @@
 package com.gl.project.BookingService.service;
 
+import com.gl.project.BookingService.client.NotificationClient;
 import com.gl.project.BookingService.client.ProviderClient;
 import com.gl.project.BookingService.client.UserClient;
 import com.gl.project.BookingService.dto.*;
@@ -22,6 +23,7 @@ public class BookingServiceImpl implements BookingService {
     private final ModelMapper modelMapper;
     private final UserClient userClient;
     private final ProviderClient providerClient;
+    private final NotificationClient notificationClient;
 
 //    @Override
 //    public BookingResponseDTO createBooking(BookingRequestDTO dto) {
@@ -63,7 +65,7 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public BookingResponseDTO createBooking(BookingRequestDTO dto) {
-        String userResponse = userClient.getUserById(dto.getUserId());
+        String userResponse = String.valueOf(userClient.getUserById(dto.getUserId()));
         String providerResponse = providerClient.getServiceById(dto.getServiceId());
 
         if (userResponse == null) throw new RuntimeException("User not found");
@@ -87,12 +89,50 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void updateBookingStatus(Long id, String status) {
+
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Booking not found"));
+
         booking.setStatus(status);
         bookingRepository.save(booking);
-    }
 
+        UserResponseDTO response = userClient.getUserById(booking.getUserId());
+        UserDTO user = response.getData();
+
+        NotificationRequest request = new NotificationRequest();
+        request.setEmail(user.getEmail());
+        request.setPhoneNumber(String.valueOf(user.getNumber()));
+
+        if(status.equals("CONFIRMED")) {
+
+            request.setSubject("PixeFixe Booking Confirmed");
+
+            request.setMessage(
+                    "🎉 Payment Successful!\n\n" +
+                            "Your booking is confirmed with PixeFixe.\n" +
+                            "Booking ID: " + id + "\n" +
+                            "Status: CONFIRMED\n\n" +
+                            "Thank you for choosing PixeFixe.\n" +
+                            "We are flying to fix your service! ✨"
+            );
+        }
+
+        if(status.equals("CANCELLED")) {
+
+            request.setSubject("PixeFixe Booking Cancelled");
+
+            request.setMessage(
+                    "❌ Payment Cancelled\n\n" +
+                            "Your booking has been cancelled.\n" +
+                            "Booking ID: " + id + "\n\n" +
+                            "If any amount was deducted, it will be refunded.\n" +
+                            "— PixeFixe Support"
+            );
+        }
+
+        notificationClient.sendEmail(request);
+        notificationClient.sendSms(request);
+    }
     @Override
     public List<BookingResponseDTO> getBookingsByUser(Long userId) throws BookingException {
 

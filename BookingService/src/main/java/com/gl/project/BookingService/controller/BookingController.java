@@ -48,7 +48,7 @@ public class BookingController {
 
     // NEW ENDPOINT: Added for Payment Service automation
     // Path: PATCH /bookings/{id}/status?status=CONFIRMED
-    @PatchMapping("/{id}/status")
+    @PutMapping("/{id}/status")
     public ResponseEntity<Void> updateBookingStatus(
             @PathVariable Long id,
             @RequestParam String status) {
