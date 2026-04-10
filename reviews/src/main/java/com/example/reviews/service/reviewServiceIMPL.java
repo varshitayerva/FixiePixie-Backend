@@ -2,6 +2,10 @@ package com.example.reviews.service;
 
 
 
+import com.example.reviews.client.ProviderClient;
+import com.example.reviews.client.UserClient;
+
+import com.example.reviews.dto.UserResponseDTO;
 import com.example.reviews.dto.reviewDTO;
 
 import com.example.reviews.dto.reviewUpdateDTO;
@@ -32,27 +36,54 @@ public class reviewServiceIMPL implements reviewService {
 
     private reviewRepository reviewRepository;
 
+    @Autowired
+    ProviderClient providerClient;
+
+    @Autowired
+    UserClient userClient;
+
     @Override
     public reviewDTO createReview(reviewDTO reviewDTO) {
-        // 1. Save all details to Database
-        review reviewEntity = review.builder()
-                .userId(reviewDTO.getUserId())
-                .userName(reviewDTO.getUserName())
-                .comment(reviewDTO.getComment())
-                .bookingId(reviewDTO.getBookingId())
-                .providerServiceId(reviewDTO.getProviderServiceId())
-                .rating(reviewDTO.getRating())
-                .build();
 
-        review savedReview = reviewRepository.save(reviewEntity);
+        UserResponseDTO response = userClient.getUserById(reviewDTO.getUserId());
 
-        // 2. Return ONLY name, rating, and comment
-        return reviewDTO.builder()
-                .userName(savedReview.getUserName())
-                .rating(savedReview.getRating())
-                .comment(savedReview.getComment())
-                .build();
+
+        String userName = (response != null && response.getData() != null)
+                ? response.getData().getName()
+                : "Unknown User";
+
+
+        String serviceName = providerClient.getServiceById(reviewDTO.getProviderServiceId());
+
+
+        if (userName != null && serviceName != null) {
+            review reviewEntity = review.builder()
+                    .userId(reviewDTO.getUserId())
+                    .providerServiceId(reviewDTO.getProviderServiceId())
+                    .userName(userName)
+
+                    .rating(reviewDTO.getRating())
+                    .comment(reviewDTO.getComment())
+                    .build();
+
+            review saved = reviewRepository.save(reviewEntity);
+
+
+            return reviewDTO.builder()
+                    .id(saved.getId())
+                    .userId(saved.getUserId())
+                    .userName(userName)
+                    .providerServiceId(saved.getProviderServiceId())
+                    .rating(saved.getRating())
+                    .comment(saved.getComment())
+                    .createdAt(saved.getCreatedAt())
+                    .build();
+        }
+
+        throw new RuntimeException("Validation Failed: User or Service does not exist.");
     }
+
+
 
     @Override
     public List<reviewDTO> getAllReviews() {
@@ -63,7 +94,7 @@ public class reviewServiceIMPL implements reviewService {
     }
 
     private reviewDTO mapToMinimalDTO(review entity) {
-        // This ensures the userName from DB is put into the list
+
         return reviewDTO.builder()
                 .userName(entity.getUserName())
                 .rating(entity.getRating())
@@ -78,7 +109,7 @@ public class reviewServiceIMPL implements reviewService {
         existing.setRating(updateDTO.getRating());
         existing.setComment(updateDTO.getComment());
         review updated = reviewRepository.save(existing);
-        return mapToMinimalDTO(updated);
+        return mapToDTOWithDetails(updated);
     }
 
     @Override
@@ -86,6 +117,26 @@ public class reviewServiceIMPL implements reviewService {
         reviewRepository.deleteById(id);
     }
 
+
+    private reviewDTO mapToDTOWithDetails(review entity) {
+
+        UserResponseDTO response = userClient.getUserById(entity.getUserId());
+
+
+        String userName = (response != null && response.getData() != null)
+                ? response.getData().getName()
+                : "Unknown User";
+
+        return reviewDTO.builder()
+                .id(entity.getId())
+                .userId(entity.getUserId())
+                .userName(userName) // Fetched from User Service
+                .providerServiceId(entity.getProviderServiceId())
+                .rating(entity.getRating())
+                .comment(entity.getComment())
+                .createdAt(entity.getCreatedAt())
+                .build();
+    }
 
 }
 
