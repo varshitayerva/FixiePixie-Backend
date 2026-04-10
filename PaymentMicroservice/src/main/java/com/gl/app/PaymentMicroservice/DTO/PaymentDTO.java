@@ -14,8 +14,8 @@ public class PaymentDTO {
     @NotNull
     private Long bookingId;
 
-//    @NotNull
-//    private String status;
+    @NotNull
+    private String status;
 
     @NotNull
     private Double amount;     // Total price to be charged

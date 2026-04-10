@@ -21,16 +21,19 @@ public class NotificationServiceImpl implements NotificationService {
 
         try {
             SimpleMailMessage message = new SimpleMailMessage();
+
+            message.setFrom(env.getProperty("spring.mail.username")); // ADD THIS
             message.setTo(request.getEmail());
             message.setSubject(request.getSubject());
             message.setText(request.getMessage());
 
             mailSender.send(message);
 
-            return env.getProperty("NotificationService.EMAIL_SENT");
+            return "EMAIL SENT";
 
         } catch (Exception e) {
-            return env.getProperty("NotificationService.EMAIL_FAILED");
+            e.printStackTrace();
+            return "EMAIL FAILED";
         }
     }
 
