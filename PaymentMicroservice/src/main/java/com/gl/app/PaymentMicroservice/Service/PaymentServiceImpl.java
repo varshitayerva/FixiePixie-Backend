@@ -25,24 +25,37 @@ public class PaymentServiceImpl implements PaymentServiceInterface {
 
     @Override
     public PaymentEntity processPayment(PaymentDTO paymentDTO) {
+
         PaymentEntity paymentEntity = new PaymentEntity();
+
         paymentEntity.setBookingId(String.valueOf(paymentDTO.getBookingId()));
         paymentEntity.setAmount(paymentDTO.getAmount());
         paymentEntity.setPaymentMethod(paymentDTO.getPaymentMethod());
-        paymentEntity.setStatus(PaymentStatus.SUCCESS);
+
+        // take status from request
+        PaymentStatus status =
+                PaymentStatus.valueOf(paymentDTO.getStatus().toUpperCase());
+
+        paymentEntity.setStatus(status);
+
         PaymentEntity savedPayment = paymentServiceRepository.save(paymentEntity);
 
-        // 2. AUTOMATION: Call Booking Service back
-        // If the payment is successful, flip the booking status to CONFIRMED
-        if (savedPayment.getStatus() == PaymentStatus.SUCCESS) {
-            try {
-                bookingClient.updateBookingStatus(paymentDTO.getBookingId(), "CONFIRMED");
-            } catch (Exception e) {
-                // We log the error but don't fail the payment process
-                // because the money has already been "taken".
-                System.err.println("CRITICAL: Payment succeeded but Booking Service update failed: " + e.getMessage());
-            }
+        // SUCCESS → confirm booking
+        if (status == PaymentStatus.SUCCESS) {
+            bookingClient.updateBookingStatus(
+                    paymentDTO.getBookingId(),
+                    "CONFIRMED"
+            );
         }
+
+        // FAILED → cancel booking
+        if (status == PaymentStatus.FAILED) {
+            bookingClient.updateBookingStatus(
+                    paymentDTO.getBookingId(),
+                    "CANCELLED"
+            );
+        }
+
         return savedPayment;
     }
     @Override
