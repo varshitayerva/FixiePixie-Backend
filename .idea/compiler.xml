@@ -15,20 +15,27 @@
         <module name="eureka-server" />
         <module name="BookingService (2)" />
       </profile>
-      <profile name="Annotation profile for BookingService" enabled="true">
+      <profile name="Annotation profile for api-gateway" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
+        </processorPath>
+        <module name="api-gateway" />
+      </profile>
+      <profile name="Annotation profile for PaymentMicroservice" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
         </processorPath>
-        <module name="api-gateway" />
+        <module name="PaymentMicroservice" />
         <module name="BookingService (1)" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="PaymentMicroservice" target="21" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -36,6 +43,7 @@
       <module name="BookingService (1)" options="-parameters" />
       <module name="BookingService (2)" options="-parameters" />
       <module name="NotificationService" options="-parameters" />
+      <module name="PaymentMicroservice" options="-parameters" />
       <module name="ProviderService" options="-parameters" />
       <module name="UserService" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
