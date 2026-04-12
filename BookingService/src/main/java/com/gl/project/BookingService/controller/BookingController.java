@@ -78,5 +78,15 @@ public class BookingController {
         return ResponseEntity.ok(bookingService.deleteBooking(id));
     }
 
+    @GetMapping("/provider-view/{providerId}")
+    public ResponseEntity<List<BookingResponseDTO>> getProviderBookings(@PathVariable Long providerId) {
+        List<BookingResponseDTO> dashboardData = bookingService.getProviderDashboard(providerId);
+
+        if (dashboardData.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.ok(dashboardData);
+    }
 
 }

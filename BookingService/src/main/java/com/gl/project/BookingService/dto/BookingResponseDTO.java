@@ -19,4 +19,9 @@ public class BookingResponseDTO {
     private LocalDate date;
     private String status;
     private String timeSlot;
+
+    private String serviceName;
+    private String customerName;
+    private String customerNumber;
+    private String customerAddress;
 }

@@ -17,4 +17,5 @@ public interface BookingService {
     void updateBookingStatus(Long id, String status);
 
     public List<BookingDetailsDTO> getBookingsByServiceProvider(Long serviceId) throws BookingException;
+    List<BookingResponseDTO> getProviderDashboard(Long providerId);
 }

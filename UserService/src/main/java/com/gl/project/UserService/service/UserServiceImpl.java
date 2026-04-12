@@ -91,6 +91,7 @@ public class UserServiceImpl implements UserService {
 
         return AuthResponse.builder()
                 .token(token)
+                .userId(user.getId())
                 .email(user.getEmail())
                 .role(user.getRole().name())
                 .message("Login successful")

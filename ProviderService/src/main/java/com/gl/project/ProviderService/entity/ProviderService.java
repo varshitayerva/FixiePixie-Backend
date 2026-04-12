@@ -20,20 +20,24 @@ public class ProviderService {
     @Column(length = 500)
     private String description;
 
+    @Column(nullable = false)
+    private Long providerId;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ServiceCategory category;
 
+
     public ProviderService() {}
 
     public ProviderService(Long id, String serviceName, double price,
-                           String description, ServiceCategory category) {
+                           String description, ServiceCategory category,Long providerId) {
         this.id = id;
         this.serviceName = serviceName;
         this.price = price;
         this.description = description;
         this.category = category;
+        this.providerId = providerId;
     }
 
     public Long getId() {
@@ -75,4 +79,13 @@ public class ProviderService {
     public void setCategory(ServiceCategory category) {
         this.category = category;
     }
+
+    public Long getProviderId() {
+        return providerId;
+    }
+
+    public void setProviderId(Long providerId) {
+        this.providerId = providerId;
+    }
 }
+

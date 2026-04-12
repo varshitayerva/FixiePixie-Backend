@@ -89,6 +89,8 @@ public class ServiceServiceImpl implements ServiceServiceInterface {
         existing.setDescription(dto.getDescription());
         existing.setCategory(dto.getCategory());
 
+        existing.setProviderId(dto.getProviderId());
+
         return ServiceMapper.toDTO(repo.save(existing));
     }
 
@@ -111,5 +113,13 @@ public class ServiceServiceImpl implements ServiceServiceInterface {
                 });
 
         repo.delete(service);
+    }
+
+    @Override
+    public List<ServiceDTO> getServicesByProvider(Long providerId) {
+        return repo.findByProviderId(providerId)
+                .stream()
+                .map(ServiceMapper::toDTO)
+                .collect(Collectors.toList());
     }
 }
