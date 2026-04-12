@@ -1,38 +1,45 @@
 package com.gl.app.PaymentMicroservice.Utility;
 
+import com.gl.app.PaymentMicroservice.DTO.PaymentDTO;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import java.util.Arrays;
 
 @Aspect
 @Component
 public class LoggingAspect {
 
-    private static final Logger log = LoggerFactory.getLogger(LoggingAspect.class);
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Around("execution(* com.gl.app.PaymentMicroservice.Service..*(..))")
-    public Object logServiceCalls(ProceedingJoinPoint joinPoint) throws Throwable {
-        String method = joinPoint.getSignature().toShortString();
-        log.info("Entering {} with args {}", method, Arrays.toString(joinPoint.getArgs()));
-        try {
-            Object result = joinPoint.proceed();
-            log.info("Exiting {} with result {}", method, result);
-            return result;
-        } catch (Throwable ex) {
-            log.error("Exception in {}: {}", method, ex.getMessage(), ex);
-            throw ex;
+    @Pointcut("execution(* com.gl.app.PaymentMicroservice.Service.PaymentServiceImpl.*(..))")
+    public void paymentServiceMethods() {}
+
+    @Before("paymentServiceMethods()")
+    public void logBefore(JoinPoint joinPoint) {
+        Object[] args = joinPoint.getArgs();
+        String methodName = joinPoint.getSignature().getName();
+
+        if (args.length > 0 && args[0] instanceof PaymentDTO dto) {
+            logger.info(">>> [PAYMENT START] Method: {} | BookingID: {} | Amount: {} | Method: {}",
+                    methodName, dto.getBookingId(), dto.getAmount(), dto.getPaymentMethod());
+        } else {
+            logger.info(">>> Entering Method: {}", methodName);
         }
     }
 
-    @AfterThrowing(pointcut = "execution(* com.gl.app.PaymentMicroservice.Controller..*(..))", throwing = "ex")
-    public void logControllerException(JoinPoint joinPoint, Throwable ex) {
-        log.error("Controller exception in {}: {}", joinPoint.getSignature().toShortString(), ex.getMessage(), ex);
+    @AfterReturning(pointcut = "paymentServiceMethods()", returning = "result")
+    public void logAfter(JoinPoint joinPoint, Object result) {
+        logger.info("<<< [PAYMENT SUCCESS] Method: {} completed successfully.",
+                joinPoint.getSignature().getName());
+    }
+
+    @AfterThrowing(pointcut = "paymentServiceMethods()", throwing = "error")
+    public void logError(JoinPoint joinPoint, Throwable error) {
+        logger.error("!!! [PAYMENT ERROR] Method: {} | Exception: {} | Message: {}",
+                joinPoint.getSignature().getName(),
+                error.getClass().getSimpleName(),
+                error.getMessage());
     }
 }
