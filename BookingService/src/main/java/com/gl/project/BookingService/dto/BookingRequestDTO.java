@@ -18,4 +18,7 @@ public class BookingRequestDTO {
     @NotNull
     @Future(message = "Booking date must be in future")
     private LocalDate date;
+
+    @NotNull(message = "Time slot should not be empty")
+    private String timeSlot;
 }

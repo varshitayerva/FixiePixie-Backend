@@ -1,6 +1,7 @@
 package com.gl.project.ProviderService.controller;
 
 import com.gl.project.ProviderService.dto.ServiceDTO;
+import com.gl.project.ProviderService.entity.ServiceCategory;
 import com.gl.project.ProviderService.service.ServiceServiceInterface;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,10 +41,21 @@ public class ServiceController {
         return service.updateService(id, dto);
     }
 
+    @GetMapping("/category/{category}")
+    public List<ServiceDTO> getByCategory(@PathVariable ServiceCategory category) {
+        return service.getByCategory(category);
+    }
+
 
     @DeleteMapping("/{id}")
     public String deleteService(@PathVariable Long id) {
         service.deleteService(id);
         return "Service deleted successfully with ID: " + id;
+    }
+
+    @GetMapping("/provider/{providerId}")
+    public List<ServiceDTO> getServicesByProvider(@PathVariable Long providerId) {
+        return service.getServicesByProvider(providerId);
+        // Note: You'll need to add this method to your Interface and Impl too
     }
 }
