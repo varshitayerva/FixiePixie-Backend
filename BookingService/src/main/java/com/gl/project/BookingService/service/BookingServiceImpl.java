@@ -27,6 +27,7 @@ public class BookingServiceImpl implements BookingService {
 
 
 
+
     @Override
     public BookingResponseDTO createBooking(BookingRequestDTO dto) {
         UserResponseDTO userResponse = userClient.getUserById(dto.getUserId());
@@ -47,10 +48,15 @@ public class BookingServiceImpl implements BookingService {
 
         Booking saved = bookingRepository.save(booking);
 
-        return new BookingResponseDTO(
-                saved.getId(), saved.getUserId(), saved.getServiceId(),
-                saved.getDate(), saved.getStatus(), saved.getTimeSlot()
-        );
+        // Use the Builder instead of the constructor to avoid the "Cannot resolve constructor" error
+        return BookingResponseDTO.builder()
+                .id(saved.getId())
+                .userId(saved.getUserId())
+                .serviceId(saved.getServiceId())
+                .date(saved.getDate())
+                .status(saved.getStatus())
+                .timeSlot(saved.getTimeSlot())
+                .build();
     }
 
     @Override
@@ -117,10 +123,13 @@ public class BookingServiceImpl implements BookingService {
             ServiceDTO service = providerClient.getServiceById(booking.getServiceId());
             String serviceName = service.getServiceName();
 
+
+
             return new BookingDetailsDTO(
                     booking.getId(),
                     userName,
                     serviceName,
+                    booking.getServiceId(),
                     booking.getDate(),
                     booking.getStatus(),
                     booking.getTimeSlot()
@@ -150,6 +159,7 @@ public class BookingServiceImpl implements BookingService {
                     booking.getId(),
                     userName,
                     serviceName,
+                    booking.getServiceId(),
                     booking.getDate(),
                     booking.getStatus(),
                     booking.getTimeSlot()
@@ -168,5 +178,46 @@ public class BookingServiceImpl implements BookingService {
         bookingRepository.save(booking);
 
         return "Booking cancelled successfully";
+    }
+
+    public List<BookingResponseDTO> getProviderDashboard(Long providerId) {
+        // 1. Get all services owned by this provider from ProviderService
+        List<ServiceDTO> myServices = providerClient.getServicesByProvider(providerId);
+
+        // Extract just the IDs to query the Booking DB
+        List<Long> serviceIds = myServices.stream()
+                .map(ServiceDTO::getId)
+                .toList();
+
+        // 2. Find all bookings in our DB for these services
+        List<Booking> bookings = bookingRepository.findByServiceIdIn(serviceIds);
+
+        // 3. Transform Bookings into ResponseDTOs with Customer/Service info
+        return bookings.stream().map(booking -> {
+            // Find the service name from our list
+            String sName = myServices.stream()
+                    .filter(s -> s.getId().equals(booking.getServiceId()))
+                    .findFirst()
+                    .map(ServiceDTO::getServiceName)
+                    .orElse("Unknown Service");
+
+            // Call User Service to get the Customer's name and number
+            // (Assuming your UserDTO has name, number, address)
+            UserResponseDTO response = userClient.getUserById(booking.getUserId());
+            UserDTO customer = response.getData();
+
+            return BookingResponseDTO.builder()
+                    .id(booking.getId())
+                    .userId(booking.getUserId())
+                    .serviceId(booking.getServiceId())
+                    .date(booking.getDate())
+                    .status(booking.getStatus())
+                    .timeSlot(booking.getTimeSlot())
+                    .serviceName(sName)
+                    .customerName(customer.getName())
+                    .customerNumber(String.valueOf(customer.getNumber()))
+                    .customerAddress(customer.getAddress())
+                    .build();
+        }).collect(Collectors.toList());
     }
 }

@@ -21,15 +21,19 @@ public class ServiceDTO {
     // ENUM FIELD
     private ServiceCategory category;
 
+    private Long providerId;
+
     public ServiceDTO() {}
 
     public ServiceDTO(Long id, String serviceName, double price,
-                      String description, ServiceCategory category) {
+                      String description, ServiceCategory category, Long providerId) {
         this.id = id;
         this.serviceName = serviceName;
         this.price = price;
         this.description = description;
         this.category = category;
+        this.providerId = providerId;
+
     }
 
     public Long getId() {
@@ -71,6 +75,8 @@ public class ServiceDTO {
     public void setCategory(ServiceCategory category) {
         this.category = category;
     }
+    public Long getProviderId() { return providerId; }
+    public void setProviderId(Long providerId) { this.providerId = providerId; }
 
     @Override
     public String toString() {

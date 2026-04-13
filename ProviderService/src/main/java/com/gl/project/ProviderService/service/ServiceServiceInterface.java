@@ -23,4 +23,5 @@ public interface ServiceServiceInterface {
 
 
     void deleteService(Long id);
+    List<ServiceDTO> getServicesByProvider(Long providerId);
 }

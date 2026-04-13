@@ -19,7 +19,7 @@ public class ServiceMapper {
 
         service.setDescription(dto.getDescription());
         service.setCategory(dto.getCategory());
-
+        service.setProviderId(dto.getProviderId());
         return service;
     }
 
@@ -37,6 +37,7 @@ public class ServiceMapper {
 
         dto.setDescription(service.getDescription());
         dto.setCategory(service.getCategory());
+        dto.setProviderId(service.getProviderId());
 
         return dto;
     }

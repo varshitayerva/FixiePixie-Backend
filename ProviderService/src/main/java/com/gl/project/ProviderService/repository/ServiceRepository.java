@@ -10,4 +10,6 @@ public interface ServiceRepository extends JpaRepository<ProviderService, Long> 
     List<ProviderService> findByCategory(ServiceCategory category);
 
     boolean existsByServiceName(String serviceName);
+
+    List<ProviderService> findByProviderId(Long providerId);
 }

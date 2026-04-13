@@ -52,4 +52,10 @@ public class ServiceController {
         service.deleteService(id);
         return "Service deleted successfully with ID: " + id;
     }
+
+    @GetMapping("/provider/{providerId}")
+    public List<ServiceDTO> getServicesByProvider(@PathVariable Long providerId) {
+        return service.getServicesByProvider(providerId);
+        // Note: You'll need to add this method to your Interface and Impl too
+    }
 }
